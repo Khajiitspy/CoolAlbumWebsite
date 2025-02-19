@@ -1,0 +1,21 @@
+﻿.CoolItem {
+    border: 3px solid Green;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.Linker {
+    padding: 10px 20px;
+    margin: 20px;
+    color: forestgreen;
+    background-color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+    .Linker:hover {
+        background-color: azure;
+    }

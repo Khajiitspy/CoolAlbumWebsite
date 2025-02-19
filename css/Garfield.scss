@@ -1,0 +1,32 @@
+﻿$Screen-Size: 1280px;
+$Blue-Color: #00ffff;
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+
+.my-container {
+    margin: auto;
+    width: $Screen-Size;
+    border: 3px solid Green;
+    padding: 20px;
+    border-radius: 20px;
+
+    .my-center {
+        text-align: center
+    }
+
+    .my-color {
+        color: $Blue-Color;
+    }
+}
+
+.Center-Container {
+    display: flex; /* Enables flexbox */
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+}
