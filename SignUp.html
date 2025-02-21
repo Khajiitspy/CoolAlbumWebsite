@@ -16,24 +16,40 @@
 
     <h1 style="font-size: 30pt; color: forestgreen; text-align: center; margin: 30px" class="my-color my-center">Sign Up</h1>
 
-    <div class="my-container Center-Container" style="width: 350px">
-        <form>
-            <div class="Center-Container" style="margin: 20px">
-                <input style="width: 200px;" class="form-control me-2 my-center" type="Username" placeholder="Username" aria-label="Username">
-            </div>
+    <div class="mt-2">
+        <form class="col-sm-8 col-md-6 col-lg-6 offset-lg-3 offset-md-3 offset-sm-2 my-container p-5">
+
+            <input class="form-control my-center" type="Username" placeholder="Username" aria-label="Username">
             <br />
-            <div class="Center-Container">
-                <input style="width: 200px;" class="form-control me-2 my-center" type="password" placeholder="Password" aria-label="Password">
-            </div>
+            <input class="form-control my-center" type="password" placeholder="Password" aria-label="Password">
             <br />
-            <div class="Center-Container">
-                <input style="width: 200px;" class="form-control me-2 my-center" type="password" placeholder="Confirm Password" aria-label="Confirm Password">
-            </div>
+            <input class="form-control my-center" type="password" placeholder="Confirm Password" aria-label="Confirm Password">
             <br />
-            <div class="Center-Container" style="margin: 20px">
-                <button class="btn btn-outline-success" type="submit">Sign Up</button>
-            </div>
+            <label for="AvatarPhoto" class="col-4 offset-4">
+                <img src="Images/EmptyAvatar.jpg" style="max-width: 100%; max-height:100%; cursor:pointer; border-radius:50px;" id="AvatarImage" />
+            </label>
+            <br />
+
+            <input class="form-control" type="file" placeholder="Choose File" aria-label="Choose File" id="AvatarPhoto">
+            <br />
+
+            <button class="btn btn-outline-success col-4 offset-4" type="submit">Sign Up</button>
         </form>
     </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const photo = document.getElementById("AvatarPhoto");
+        photo.onchange = (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                document.getElementById("AvatarImage").src = URL.createObjectURL(file);
+/*                console.log("Your photo: ", URL.createObjectURL(file));*/
+            }
+        }
+        console.log("Hello World!");
+
+    </script>
 </body>
 </html>
